@@ -10,6 +10,9 @@ public class BaseChromeTest extends BaseTest {
 	public void setup() {
 		System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
 		System.setProperty("webdriver.chrome.verboseLogging", "true");
+
+		// Adding remote allow origins
+
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver(chromeOptions);
