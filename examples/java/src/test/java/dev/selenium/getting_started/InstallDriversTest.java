@@ -11,43 +11,43 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class InstallDriversTest {
-    @Test
-    @Disabled("Do not run in CI")
-    public void chromeSession() {
-        WebDriverManager.chromedriver().setup();
+	@Test
+	@Disabled("Do not run in CI")
+	public void chromeSession() {
+		WebDriverManager.chromedriver().setup();
 
-        WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver();
 
-        driver.quit();
-    }
+		driver.quit();
+	}
 
-    @Test
-    @Disabled("Do not run in CI")
-    public void edgeSession() {
-        WebDriverManager.edgedriver().setup();
+	@Test
+	@Disabled("Do not run in CI")
+	public void edgeSession() {
+		WebDriverManager.edgedriver().setup();
 
-        WebDriver driver = new EdgeDriver();
+		WebDriver driver = new EdgeDriver();
 
-        driver.quit();
-    }
+		driver.quit();
+	}
 
-    @Test
-    @Disabled("Do not run in CI")
-    public void firefoxSession() {
-        WebDriverManager.firefoxdriver().setup();
+	@Test
+	@Disabled("Do not run in CI")
+	public void firefoxSession() {
+		WebDriverManager.firefoxdriver().setup();
 
-        WebDriver driver = new FirefoxDriver();
+		WebDriver driver = new FirefoxDriver();
 
-        driver.quit();
-    }
+		driver.quit();
+	}
 
-    @Test
-    @Disabled("Do not run in CI")
-    public void ieSession() {
-        WebDriverManager.iedriver().setup();
+	@Test
+	@Disabled("Do not run in CI")
+	public void ieSession() {
+		WebDriverManager.iedriver().setup();
 
-        WebDriver driver = new InternetExplorerDriver();
+		WebDriver driver = new InternetExplorerDriver();
 
-        driver.quit();
-    }
+		driver.quit();
+	}
 }

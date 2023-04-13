@@ -9,16 +9,17 @@ import org.openqa.selenium.safari.SafariOptions;
 
 @EnabledOnOs(OS.MAC)
 public class SafariTest {
-    public SafariDriver driver;
 
-    @AfterEach
-    public void quit() {
-        driver.quit();
-    }
+	public SafariDriver driver;
 
-    @Test
-    public void basicOptions() {
-        SafariOptions options = new SafariOptions();
-        driver = new SafariDriver(options);
-    }
+	@AfterEach
+	public void quit() {
+		driver.quit();
+	}
+
+	@Test
+	public void basicOptions() {
+		SafariOptions options = new SafariOptions();
+		driver = new SafariDriver(options);
+	}
 }
