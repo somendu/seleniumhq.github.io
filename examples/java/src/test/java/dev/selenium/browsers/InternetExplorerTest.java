@@ -9,16 +9,17 @@ import org.openqa.selenium.ie.InternetExplorerOptions;
 
 @EnabledOnOs(OS.WINDOWS)
 public class InternetExplorerTest {
-    public InternetExplorerDriver driver;
 
-    @AfterEach
-    public void quit() {
-        driver.quit();
-    }
+	public InternetExplorerDriver driver;
 
-    @Test
-    public void basicOptions() {
-        InternetExplorerOptions options = new InternetExplorerOptions();
-        driver = new InternetExplorerDriver(options);
-    }
+	@AfterEach
+	public void quit() {
+		driver.quit();
+	}
+
+	@Test
+	public void basicOptions() {
+		InternetExplorerOptions options = new InternetExplorerOptions();
+		driver = new InternetExplorerDriver(options);
+	}
 }
