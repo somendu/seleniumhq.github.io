@@ -5,32 +5,34 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class ChromeTest {
-    public ChromeDriver driver;
+import dev.selenium.BaseTest;
 
-    @AfterEach
-    public void quit() {
-        driver.quit();
-    }
+public class ChromeTest extends BaseTest {
+	public ChromeDriver driver;
 
-    @Test
-    public void basicOptions() {
-        ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(options);
-    }
+	@AfterEach
+	public void quit() {
+		driver.quit();
+	}
 
-    @Test
-    public void headlessOptions() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new");
-        driver = new ChromeDriver(options);
-    }
+	@Test
+	public void basicOptions() {
+		ChromeOptions options = new ChromeOptions();
+		driver = new ChromeDriver(options);
+	}
 
-    @Test
-    public void keepBrowserOpen() {
-        ChromeOptions options = new ChromeOptions();
-        options.setExperimentalOption("detach", true);
-        driver = new ChromeDriver(options);
-    }
+	@Test
+	public void headlessOptions() {
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless=new");
+		driver = new ChromeDriver(options);
+	}
+
+	@Test
+	public void keepBrowserOpen() {
+		ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("detach", true);
+		driver = new ChromeDriver(options);
+	}
 
 }
